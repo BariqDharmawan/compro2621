@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class OurPackageFactory extends Factory
+class TestimonyFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,9 +14,9 @@ class OurPackageFactory extends Factory
     public function definition()
     {
         return [
-            'icon' => $this->faker->randomElement(['a.svg', 'b.svg']),
-            'name' => $this->faker->sentence(4),
-            'desc' => $this->faker->paragraph(2)
+            'fullname' => $this->faker->name(),
+            'desc' => $this->faker->paragraph(3),
+            'review_at' => $this->faker->dateTime($max = 'now')
         ];
     }
 }

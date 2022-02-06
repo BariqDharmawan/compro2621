@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\OurFeature;
 use Illuminate\Database\Seeder;
 
 class OurFeatureSeeder extends Seeder
@@ -13,6 +14,6 @@ class OurFeatureSeeder extends Seeder
      */
     public function run()
     {
-        //
+        OurFeature::factory()->count(4)->create();
     }
 }

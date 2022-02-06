@@ -15,6 +15,9 @@ class CreateOurPackagesTable extends Migration
     {
         Schema::create('our_packages', function (Blueprint $table) {
             $table->id();
+            $table->string('icon');
+            $table->string('name');
+            $table->text('desc');
             $table->timestamps();
         });
     }
