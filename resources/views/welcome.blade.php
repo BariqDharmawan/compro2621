@@ -68,17 +68,13 @@
         </div> <!-- header hero -->
     </section>
 
-    <!--====== HEADER PART ENDS ======-->
-
-    <!--====== SERVICES PART START ======-->
-
-    <section class="services_area pt-120" id="about">
+    <section class="services_area pt-120" id="section-feature">
         <div class="container">
             <div class="row justify-center">
                 <div class="w-full lg:w-1/2">
                     <div class="section_title text-center pb-6">
-                        <h5 class="sub_title">About</h5>
-                        <h4 class="main_title">Work Process</h4>
+                        <h5 class="sub_title">Fitur</h5>
+                        <h4 class="main_title">Kami memiliki berbagai fitur, yaitu</h4>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -133,7 +129,7 @@
 
     <!--====== ABOUT PART START ======-->
 
-    <section id="why" class="about_area pt-120 relative">
+    <section id="section-package" class="about_area pt-120 relative">
         <div class="about_image flex items-end justify-end">
             <div class="image lg:pr-13">
                 <img src="{{ asset('template/assets/images/about.svg') }}" alt="about">
@@ -144,8 +140,8 @@
                 <div class="w-full lg:w-1/2">
                     <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
                         <div class="section_title pb-9">
-                            <h5 class="sub_title">Why Choose Us</h5>
-                            <h4 class="main_title">Your Goal is Our Achievement</h4>
+                            <h5 class="sub_title">Paket</h5>
+                            <h4 class="main_title">Paket yang kami tawarkan antara lain</h4>
                         </div> <!-- section title -->
                         <p>Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergren, no sea takimata sanctus. </p>
                         <ul class="about_list pt-3">
@@ -184,232 +180,49 @@
 
     <!--====== SERVICES PART START ======-->
 
-    <section id="services" class="services_area pt-120 pb-120">
+    <section id="section-testimony" class="team_area bg-gray pt-120 pb-120">
         <div class="container">
             <div class="row justify-center">
                 <div class="w-full lg:w-1/2">
                     <div class="section_title text-center pb-6">
-                        <h5 class="sub_title">What We Do</h5>
-                        <h4 class="main_title">Our Services</h4>
+                        <h5 class="sub_title">Testimony</h5>
+                        <h4 class="main_title">What people say about us</h4>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
-            <div class="row justify-center">
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-layout"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Web Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-bullhorn"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Digital Marketing</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-mobile"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Mobile Apps</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-seo"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">SEO Consultancy</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-layers"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Graphic Design</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-briefcase"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5 xl:mt-10">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-2xl lg:text-xl xl:text-3xl">Business Consultancy</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== SERVICES PART ENDS ======-->
-
-    <!--====== WORK PART START ======-->
-
-    <section id="work" class="work_area bg-gray pt-120 pb-120">
-        <div class="container">
-            <div class="row justify-center">
-                <div class="w-ull lg:w-1/2">
-                    <div class="section_title text-center pb-6">
-                        <h5 class="sub_title">Works</h5>
-                        <h4 class="main_title">Some of Our Recent Works</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="container-fluid">
-            <div class="work_wrapper relative">
-                <div class="row work_active">
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-1.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Marketing</a></h4>
-                                    <p class="mt-2">NoCodeAPI</p>
-                                </div>
+            <div class="team-wrapper relative">
+                <div class="row team_active py-3">
+                    @for ($i = 1; $i <= 5; $i++)
+                        <div class="w-full lg:w-4/12h">
+                            <div class="single_team_item h-full mx-auto">
+                                <div class="single_team my-0 mx-3 h-full">
+                                    <div class="team_image relative">
+                                        <img src="{{ asset('template/assets/images/team-' . $i . '.jpg') }}"
+                                        alt="team" class="w-full">
+                                        <ul class="social absolute top-4 right-8">
+                                            <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
+                                            <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
+                                            <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="team_content py-5 px-8 relative">
+                                        <h4 class="team_name text-xl md:text-2xl">
+                                            <a href="#" class="text-black group-hover:text-white">Chris Dave</a>
+                                        </h4>
+                                        <p class="mt-2 transition-all duration-300 group-hover:text-white">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, qui sint! Suscipit eius cumque molestiae totam officia animi sint consequuntur?
+                                        </p>
+                                    </div>
+                                </div> <!-- single team -->
                             </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-2.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Creative Design</a></h4>
-                                    <p class="mt-2">UIdeck</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-3.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Web Design</a></h4>
-                                    <p class="mt-2">GrayGrids</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-4.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Analysis</a></h4>
-                                    <p class="mt-2">Ayro UI</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-5.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">SMM</a></h4>
-                                    <p class="mt-2">LineIcons</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-2.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">SEO</a></h4>
-                                    <p class="mt-2">PageBulb</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
-                    <div class="w-full lg:w-3/12">
-                        <div class="single_item mx-auto">
-                            <div class="single_work mx-3">
-                                <div class="work_image">
-                                    <img src="{{ asset('template/assets/images/work-4.jpg') }}" alt="work" class="w-full">
-                                </div>
-                                <div class="work_content">
-                                    <a href="#" class="arrow"><i class="lni lni-chevron-right"></i></a>
-                                    <h4 class="work_title text-xl md:text-2xl"><a href="#">Mobile App</a></h4>
-                                    <p class="mt-2">Rocket Internet LTD</p>
-                                </div>
-                            </div>
-                        </div> <!-- single work -->
-                    </div>
+                        </div>
+                    @endfor
                 </div> <!-- row -->
             </div>
         </div> <!-- container -->
     </section>
 
-    <!--====== WORK PART ENDS ======-->
+    <!--====== SERVICES PART ENDS ======-->
 
     <!--====== PRICING PLAN PART START ======-->
 

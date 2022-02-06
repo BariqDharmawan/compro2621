@@ -3,8 +3,8 @@
         <div class="row items-center">
             <div class="w-full">
                 <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
-                    <a class="navbar-brand mr-5" href="index.html">
-                        <img src="{{ asset('template/assets/images/logo.svg') }}" alt="Logo">
+                    <a class="navbar-brand mr-5 font-bold text-black" href="index.html">
+                        {{ config('app.name') }}
                     </a>
                     <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="toggler-icon"></span>
@@ -18,22 +18,13 @@
                                 <a class="page-scroll active" href="#home">Home</a>
                             </li>
                             <li class="nav-item ml-5 lg:ml-11">
-                                <a class="page-scroll" href="#about">About</a>
+                                <a class="page-scroll" href="#section-feature">Fitur</a>
                             </li>
                             <li class="nav-item ml-5 lg:ml-11">
-                                <a class="page-scroll" href="#services">Services</a>
+                                <a class="page-scroll" href="#section-package">Paket</a>
                             </li>
                             <li class="nav-item ml-5 lg:ml-11">
-                                <a class="page-scroll" href="#work">Projects</a>
-                            </li>
-                            <li class="nav-item ml-5 lg:ml-11">
-                                <a class="page-scroll" href="#pricing">Pricing</a>
-                            </li>
-                            <li class="nav-item ml-5 lg:ml-11">
-                                <a class="page-scroll" href="#blog">Blog</a>
-                            </li>
-                            <li class="nav-item ml-5 lg:ml-11">
-                                <a class="page-scroll" href="#contact">Contact</a>
+                                <a class="page-scroll" href="#section-testimony">Testimoni</a>
                             </li>
                         </ul>
                     </div> <!-- navbar collapse -->

@@ -2628,8 +2628,6 @@ a, button {
 
 .single_team{
   border-radius: 0.75rem;
-  margin-top: 32px;
-  margin-bottom: 32px;
 }
 
 .single_team:hover .group-hover\:opacity-0{
