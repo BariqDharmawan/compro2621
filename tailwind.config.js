@@ -24,6 +24,7 @@ module.exports = {
             transparent: 'transparent',
             white: '#ffffff',
             black: '#000000',
+            secondary: '#008037',
             gray: {
                 '50': '#f9fafb',
                 '100': '#f4f5f7',
@@ -95,6 +96,7 @@ module.exports = {
                 '700': '#046c4e',
                 '800': '#03543f',
                 '900': '#014737',
+                'lemon': '#c9e265',
             },
             teal: {
                 '50': '#edfafa',

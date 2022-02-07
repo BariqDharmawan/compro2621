@@ -1,0 +1,3 @@
+import 'boxicons'
+
+require('fslightbox')
