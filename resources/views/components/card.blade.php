@@ -5,6 +5,7 @@
     'shadow-sm' => $shadow == 'sm',
     'shadow-lg' => $shadow == 'lg',
     'shadow-md' => $shadow == 'md',
+    'shadow-none' => $shadow == 'none',
     'border',
     'border-gray-200',
     'p-3' => $pd == '3',

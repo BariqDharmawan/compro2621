@@ -39,7 +39,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="desc" class="block text-gray-600 mb-2 font-semibold">Deskripsi Singkat</label>
-                        <textarea type="text" id="desc" name="desc" class="border border-gray-300 overflow-hidden rounded block w-full"
+                        <textarea type="text" id="desc" name="desc" class="border border-gray-300 overflow-hidden
+                        rounded block w-full"
                         placeholder="Masukan deskripsi singkat disini"
                         rows="5" required>{{ preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $header->desc) }}</textarea>
                     </div>
@@ -50,7 +51,10 @@
                         placeholder="Masukan URL youtube nya disini" value="{{ $header->video_link }}" required>
                     </div>
 
-                    <button type="submit" class="bg-green-lemon hover:bg-green-400 duration-150 transition-all text-white p-3 rounded">Submit</button>
+                    <button type="submit"
+                    class="bg-green-lemon hover:bg-green-400 duration-150 transition-all text-white p-3 rounded">
+                        Submit
+                    </button>
                 </form>
             </x-modal>
         </div>

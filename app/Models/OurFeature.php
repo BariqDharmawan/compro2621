@@ -9,5 +9,5 @@ class OurFeature extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['icon', 'title', 'desc'];
+    protected $fillable = ['img', 'title', 'desc'];
 }

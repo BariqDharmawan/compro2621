@@ -14,7 +14,8 @@ class OurFeatureController extends Controller
      */
     public function index()
     {
-        //
+        $features = OurFeature::all();
+        return view('our-feature.index', compact('features'));
     }
 
     /**
@@ -35,7 +36,15 @@ class OurFeatureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'img' => ['required', 'image'],
+            'title' => ['required', 'string', 'min:3'],
+            'desc' => ['required', 'string', 'min:5']
+        ]);
+
+        OurFeature::create($request->all());
+
+        return redirect()->back()->with('success', 'Berhasil menambah fitur baru');
     }
 
     /**
@@ -57,7 +66,7 @@ class OurFeatureController extends Controller
      */
     public function edit(OurFeature $ourFeature)
     {
-        //
+        return view('our-feature.edit', compact('ourFeature'));
     }
 
     /**
@@ -69,7 +78,12 @@ class OurFeatureController extends Controller
      */
     public function update(Request $request, OurFeature $ourFeature)
     {
-        //
+        $ourFeature->img = $request->file('img');
+        $ourFeature->title = $request->title;
+        $ourFeature->desc = $request->desc;
+        $ourFeature->save();
+
+        return redirect()->back()->with('success', 'Berhasil mengubah fitur ' . $ourFeature->title);
     }
 
     /**
@@ -80,6 +94,9 @@ class OurFeatureController extends Controller
      */
     public function destroy(OurFeature $ourFeature)
     {
-        //
+        $name = $ourFeature->title;
+        $ourFeature->delete();
+
+        return redirect()->back()->with('success', 'Berhasil menghapus fitur ' . $name);
     }
 }

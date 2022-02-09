@@ -15,9 +15,9 @@ class CreateOurFeaturesTable extends Migration
     {
         Schema::create('our_features', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
             $table->string('title');
             $table->string('desc');
-            $table->timestamp('review_at');
             $table->timestamps();
         });
     }

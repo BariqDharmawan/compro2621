@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "boxicons": "^2.1.1",
-        "fslightbox": "^3.3.1"
+        "fslightbox": "^3.3.1",
+        "sweetalert2": "^11.4.0"
     }
 }
