@@ -56,17 +56,6 @@ class OurFeatureController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\OurFeature  $ourFeature
-     * @return \Illuminate\Http\Response
-     */
-    public function show(OurFeature $ourFeature)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\OurFeature  $ourFeature
@@ -86,7 +75,13 @@ class OurFeatureController extends Controller
      */
     public function update(Request $request, OurFeature $ourFeature)
     {
-        $ourFeature->img = $request->file('img');
+        if ($request->hasFile('img')) {
+            $img = $request->file('img');
+            $imgPath = $img->store('public/feature');
+
+            $ourFeature->img = $imgPath;
+        }
+
         $ourFeature->title = $request->title;
         $ourFeature->desc = $request->desc;
         $ourFeature->save();
