@@ -14,7 +14,8 @@ class OurPackageController extends Controller
      */
     public function index()
     {
-        //
+        $packages = OurPackage::all();
+        return view('package.index', compact('packages'));
     }
 
     /**

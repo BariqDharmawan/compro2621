@@ -5,4 +5,6 @@ mix.js('resources/assets/js/app.js', 'public/js').js('resources/assets/js/main.j
     require('postcss-import'),
     require('tailwindcss'),
     require('autoprefixer'),
-]);
+]).options({
+    processCssUrls: false
+});
