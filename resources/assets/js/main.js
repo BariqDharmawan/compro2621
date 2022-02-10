@@ -1,4 +1,4 @@
 import 'boxicons'
-import Swal from 'sweetalert2'
+import './alert'
 
 require('fslightbox')

@@ -1,6 +1,43 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./resources/assets/js/alert.js":
+/*!**************************************!*\
+  !*** ./resources/assets/js/alert.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
+
+var btnRemoves = document.querySelectorAll('.btn-remove');
+btnRemoves.forEach(function (btnRemove) {
+  var titlePopup = btnRemove.dataset.titlePopup;
+  btnRemove.closest('form').addEventListener('submit', function (bariq) {
+    var _this = this;
+
+    bariq.preventDefault();
+    sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
+      title: titlePopup,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Hapus'
+    }).then(function (result) {
+      if (result.isConfirmed) {
+        sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire('Terhapus!', 'Fitur telah berhasil dihapus', 'success');
+
+        _this.submit();
+      }
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./node_modules/boxicons/dist/boxicons.js":
 /*!************************************************!*\
   !*** ./node_modules/boxicons/dist/boxicons.js ***!
@@ -3501,8 +3538,7 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var boxicons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! boxicons */ "./node_modules/boxicons/dist/boxicons.js");
 /* harmony import */ var boxicons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(boxicons__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alert */ "./resources/assets/js/alert.js");
 
 
 

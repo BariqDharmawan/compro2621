@@ -16,26 +16,17 @@
                         <p>{{ $feature->desc }}</p>
                     </div>
 
-                    <div class="flex gap-3 mt-auto">
-                        <div x-data="{openModal: false}">
-                            <x-modal.btn class="bg-red-600 text-white px-4 rounded-full">
+                    <div class="flex justify-between mt-auto">
+                        <form action="{{ route('our-feature.destroy', $feature->id) }}" method="post">
+                            @csrf @method('DELETE')
+
+                            <button type="submit" class="bg-red-600 text-white py-2 px-5 btn-remove
+                            rounded-full inline-flex items-center"
+                            data-title-popup="Apakah kamu yakin ingin menghapus {{ $feature->title }}">
                                 <box-icon type='solid' name='trash-alt' color="#fff"></box-icon>
                                 Hapus
-                            </x-modal.btn>
-                            <x-modal>
-                                <form action="{{ route('our-feature.destroy', $feature->id) }}" method="post">
-                                    @csrf @method('PUT')
-                                    <p class="text-xl font-semibold mb-4">
-                                        Apakah kamu yakin ingin menghapus feature {{ $feature->title }}?
-                                    </p>
-
-                                    <button type="submit" class="bg-blue-600 hover:bg-blue-700
-                                    duration-150 transition-all text-white p-3 rounded">
-                                        Submit
-                                    </button>
-                                </form>
-                            </x-modal>
-                        </div>
+                            </button>
+                        </form>
 
                         <a href="" class="bg-yellow-400 text-white py-2 px-4 rounded-full">Ubah</a>
                     </div>
