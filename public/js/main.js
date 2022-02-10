@@ -38,6 +38,29 @@ btnRemoves.forEach(function (btnRemove) {
 
 /***/ }),
 
+/***/ "./resources/assets/js/form.js":
+/*!*************************************!*\
+  !*** ./resources/assets/js/form.js ***!
+  \*************************************/
+/***/ (() => {
+
+var fileInput = document.getElementById('upload');
+
+if (fileInput) {
+  fileInput.addEventListener('change', function () {
+    var filename = fileInput.files[0].name;
+    var labelInput = this.previousElementSibling;
+
+    if (this.value) {
+      labelInput.textContent = filename;
+    } else {
+      labelInput.textContent = this.dataset.text;
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/boxicons/dist/boxicons.js":
 /*!************************************************!*\
   !*** ./node_modules/boxicons/dist/boxicons.js ***!
@@ -3539,6 +3562,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var boxicons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! boxicons */ "./node_modules/boxicons/dist/boxicons.js");
 /* harmony import */ var boxicons__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(boxicons__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./alert */ "./resources/assets/js/alert.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form */ "./resources/assets/js/form.js");
+/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 

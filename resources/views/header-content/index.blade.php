@@ -39,7 +39,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="desc" class="block text-gray-600 mb-2 font-semibold">Deskripsi Singkat</label>
-                        <textarea type="text" id="desc" name="desc" class="border border-gray-300 overflow-hidden
+                        <textarea id="desc" name="desc" class="border border-gray-300 overflow-hidden
                         rounded block w-full"
                         placeholder="Masukan deskripsi singkat disini"
                         rows="5" required>{{ preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $header->desc) }}</textarea>

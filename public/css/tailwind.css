@@ -797,6 +797,9 @@ select {
 .mt-9 {
   margin-top: 2.25rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .block {
   display: block;
 }
@@ -921,6 +924,9 @@ select {
 .cursor-default {
   cursor: default;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .resize-none {
   resize: none;
 }
@@ -945,11 +951,17 @@ select {
 .content-start {
   align-content: flex-start;
 }
+.items-start {
+  align-items: flex-start;
+}
 .items-end {
   align-items: flex-end;
 }
 .items-center {
   align-items: center;
+}
+.justify-start {
+  justify-content: flex-start;
 }
 .justify-end {
   justify-content: flex-end;
@@ -1191,6 +1203,10 @@ select {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1294,6 +1310,9 @@ select {
 .leading-7 {
   line-height: 1.75rem;
 }
+.leading-normal {
+  line-height: 1.5;
+}
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -1367,6 +1386,10 @@ select {
 .text-indigo-700 {
   --tw-text-opacity: 1;
   color: rgb(81 69 205 / var(--tw-text-opacity));
+}
+.text-green-lemon {
+  --tw-text-opacity: 1;
+  color: rgb(201 226 101 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -1489,6 +1512,14 @@ select {
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(26 28 35 / var(--tw-text-opacity));
+}
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:text-green-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 159 110 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;

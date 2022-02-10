@@ -15,6 +15,7 @@ class OurFeatureController extends Controller
     public function index()
     {
         $features = OurFeature::all();
+        // dd($features);
         return view('our-feature.index', compact('features'));
     }
 
@@ -25,7 +26,7 @@ class OurFeatureController extends Controller
      */
     public function create()
     {
-        //
+        return view('our-feature.add');
     }
 
     /**
@@ -42,7 +43,14 @@ class OurFeatureController extends Controller
             'desc' => ['required', 'string', 'min:5']
         ]);
 
-        OurFeature::create($request->all());
+        $img = $request->file('img');
+        $imgPath = $img->store('public/feature');
+
+        OurFeature::create([
+            'title' => $request->title,
+            'desc' => $request->desc,
+            'img' => $imgPath
+        ]);
 
         return redirect()->back()->with('success', 'Berhasil menambah fitur baru');
     }

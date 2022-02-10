@@ -1,7 +1,14 @@
 <x-app-layout class="shadow-lg">
+
     <x-slot name="header">
         Our Feature
     </x-slot>
+
+    <div class="mb-5">
+        <a href="{{ route('our-feature.create') }}" class="bg-green-500 text-white py-2 px-4 rounded-full">
+            Tambah fitur baru
+        </a>
+    </div>
 
     @if (session('success'))
         <x-alert text="{{ session('success') }}" color="white" />
@@ -11,6 +18,9 @@
         <div class="grid grid-cols-3 gap-5">
             @foreach ($features as $feature)
                 <x-card shadow="none" class="flex flex-col">
+                    <img src="{{ Storage::url($feature->img) }}" alt="" height="80px" width="80px"
+                    class="block mx-auto rounded-full">
+
                     <div class="mb-4">
                         <p class="font-semibold mb-3">{{ $feature->title }}</p>
                         <p>{{ $feature->desc }}</p>
@@ -28,7 +38,8 @@
                             </button>
                         </form>
 
-                        <a href="" class="bg-yellow-400 text-white py-2 px-4 rounded-full">Ubah</a>
+                        <a href="{{ route('our-feature.edit', $feature->id) }}"
+                            class="bg-yellow-400 text-white py-2 px-4 rounded-full">Ubah</a>
                     </div>
                 </x-card>
             @endforeach
