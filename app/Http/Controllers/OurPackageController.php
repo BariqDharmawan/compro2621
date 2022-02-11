@@ -25,7 +25,7 @@ class OurPackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('package.add');
     }
 
     /**
@@ -36,18 +36,14 @@ class OurPackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        OurPackage::create([
+            'title' => $request->title,
+            'old_price' => $request->old_price ?? null,
+            'new_price' => $request->new_price,
+            'content' => $request->content
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\OurPackage  $ourPackage
-     * @return \Illuminate\Http\Response
-     */
-    public function show(OurPackage $ourPackage)
-    {
-        //
+        return redirect()->route('our-package.index')->with('success', 'Berhasil menambah package baru');
     }
 
     /**
@@ -58,7 +54,7 @@ class OurPackageController extends Controller
      */
     public function edit(OurPackage $ourPackage)
     {
-        //
+        return view('package.edit', compact('ourPackage'));
     }
 
     /**
@@ -70,7 +66,14 @@ class OurPackageController extends Controller
      */
     public function update(Request $request, OurPackage $ourPackage)
     {
-        //
+        $ourPackage->update([
+            'title' => $request->title,
+            'old_price' => $request->old_price ?? null,
+            'new_price' => $request->new_price,
+            'content' => $request->content
+        ]);
+
+        return redirect()->route('our-package.index')->with('success', 'Berhasil menambah package baru');
     }
 
     /**
@@ -81,6 +84,8 @@ class OurPackageController extends Controller
      */
     public function destroy(OurPackage $ourPackage)
     {
-        //
+        $ourPackage->delete();
+
+        return redirect()->back()->with('success', 'Berhasil menambah package baru');
     }
 }

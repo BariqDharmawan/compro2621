@@ -1085,6 +1085,10 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(141 162 251 / var(--tw-border-opacity));
 }
+.border-t-gray-300 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(213 214 215 / var(--tw-border-opacity));
+}
 .border-opacity-10 {
   --tw-border-opacity: 0.1;
 }
