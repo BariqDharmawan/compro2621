@@ -8,6 +8,6 @@
     @endif
 
     <x-card class="p-5">
-        @include('our-package.form', ['route' => route('our-package.store')])
+        @include('package.form', ['route' => route('our-package.store')])
     </x-card>
 </x-app-layout>

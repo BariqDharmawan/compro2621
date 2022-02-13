@@ -1,4 +1,12 @@
-@props(['shadow' => 'default', 'bg' => 'white', 'pd' => '3', 'rounded' => 'lg'])
+@props([
+    'shadow' => 'default',
+    'bg' => 'white',
+    'pd' => '4',
+    'rounded' => 'lg',
+    'header' => null,
+    'footer' => null,
+    'classFooter' => null
+])
 
 <div {{ $attributes->class([
     'shadow' => $shadow == 'default',
@@ -8,9 +16,21 @@
     'shadow-none' => $shadow == 'none',
     'border',
     'border-gray-200',
-    'p-3' => $pd == '3',
     'bg-white' => $bg == 'white',
     'rounded-' . $rounded,
 ]) }}>
-    {{ $slot }}
+    @isset($header)
+    <div class="{{ $pd == '4' ? 'p-4' : 'p-' . $pd }}">
+        {{ $header }}
+    </div>
+    @endisset
+
+    <div class="{{ $pd == '4' ? 'p-4' : 'p-' . $pd }}">
+        {{ $slot }}
+    </div>
+
+    @isset($footer)
+    <div class="{{ $pd == '4' ? 'p-4' : 'p-' . $pd }} {{ $classFooter }}">{{ $footer }}</div>
+    @endisset
+
 </div>

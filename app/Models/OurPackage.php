@@ -9,5 +9,5 @@ class OurPackage extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'old_price', 'new_price', 'content'];
+    protected $fillable = ['judul', 'harga_lama', 'harga_baru', 'deskripsi'];
 }

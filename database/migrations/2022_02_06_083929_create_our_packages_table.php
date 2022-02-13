@@ -15,10 +15,10 @@ class CreateOurPackagesTable extends Migration
     {
         Schema::create('our_packages', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->integer('old_price');
-            $table->integer('new_price');
-            $table->longText('content');
+            $table->string('judul');
+            $table->integer('harga_lama');
+            $table->integer('harga_baru');
+            $table->longText('deskripsi');
             $table->timestamps();
         });
     }

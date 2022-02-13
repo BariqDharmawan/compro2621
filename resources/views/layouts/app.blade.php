@@ -7,7 +7,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="stylesheet" href="{{ asset('css/tailwind.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/init-alpine.js') }}"></script>
 </head>
@@ -85,13 +85,12 @@
             </header>
 
             <main class="h-full overflow-y-auto">
-                <div class="container px-6 mx-auto grid">
+                <div class="container px-6 mx-auto grid py-6">
                     <div>
                         <h2 class="my-6 text-2xl font-semibold text-gray-700">
                             {{ $header }}
                         </h2>
                     </div>
-
                     {{ $slot }}
                 </div>
             </main>

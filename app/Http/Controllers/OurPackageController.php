@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePackageValidation;
+use App\Http\Requests\UpdatePackageValidation;
 use App\Models\OurPackage;
 use Illuminate\Http\Request;
 
@@ -28,20 +30,9 @@ class OurPackageController extends Controller
         return view('package.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(StorePackageValidation $request)
     {
-        OurPackage::create([
-            'title' => $request->title,
-            'old_price' => $request->old_price ?? null,
-            'new_price' => $request->new_price,
-            'content' => $request->content
-        ]);
+        OurPackage::create($request->validated());
 
         return redirect()->route('our-package.index')->with('success', 'Berhasil menambah package baru');
     }
@@ -64,14 +55,9 @@ class OurPackageController extends Controller
      * @param  \App\Models\OurPackage  $ourPackage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OurPackage $ourPackage)
+    public function update(UpdatePackageValidation $request, OurPackage $ourPackage)
     {
-        $ourPackage->update([
-            'title' => $request->title,
-            'old_price' => $request->old_price ?? null,
-            'new_price' => $request->new_price,
-            'content' => $request->content
-        ]);
+        $ourPackage->update($request->validated());
 
         return redirect()->route('our-package.index')->with('success', 'Berhasil menambah package baru');
     }
