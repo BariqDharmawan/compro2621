@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('template/assets/fonts/lineicons/font-css/LineIcons.css') }}">
 
     <!--====== Tailwind CSS ======-->
-    <link rel="stylesheet" href="{{ asset('template/assets/css/tailwindcss.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/assets/css/tailwind.css') }}">
 
 </head>
 
@@ -120,11 +120,8 @@
     <a href="#" class="scroll-top"><i class="lni lni-chevron-up"></i></a>
 
     <script src="{{ asset('template/assets/js/tiny-slider.js') }}"></script>
-
-    <!--====== Wow js ======-->
     <script src="{{ asset('template/assets/js/wow.min.js') }}"></script>
 
-    <!--====== Main js ======-->
     <script src="{{ asset('template/assets/js/main.js') }}"></script>
 
 </body>

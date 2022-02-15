@@ -14,9 +14,9 @@ class OurFeatureFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->name(),
-            'desc' => $this->faker->paragraph(3),
-            'review_at' => $this->faker->dateTime($max = 'now')
+            'img' => $this->faker->image(),
+            'title' => $this->faker->sentence(3),
+            'desc' => $this->faker->paragraph(3)
         ];
     }
 }

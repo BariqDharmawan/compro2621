@@ -85,15 +85,18 @@
             </header>
 
             <main class="h-full overflow-y-auto">
-                <div class="container px-6 mx-auto grid">
-                    <h2 class="my-6 text-2xl font-semibold text-gray-700">
-                        {{ $header }}
-                    </h2>
-
+                <div class="container px-6 mx-auto grid py-6">
+                    <div>
+                        <h2 class="my-6 text-2xl font-semibold text-gray-700">
+                            {{ $header }}
+                        </h2>
+                    </div>
                     {{ $slot }}
                 </div>
             </main>
         </div>
     </div>
+
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

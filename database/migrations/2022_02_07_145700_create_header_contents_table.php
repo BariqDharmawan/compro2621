@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOurPackagesTable extends Migration
+class CreateHeaderContentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateOurPackagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('our_packages', function (Blueprint $table) {
+        Schema::create('header_contents', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->integer('harga_lama');
-            $table->integer('harga_baru');
-            $table->longText('deskripsi');
+            $table->string('heading');
+            $table->text('desc');
+            $table->string('video_link');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateOurPackagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('our_packages');
+        Schema::dropIfExists('header_contents');
     }
 }

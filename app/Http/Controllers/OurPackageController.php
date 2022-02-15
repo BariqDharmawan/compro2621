@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePackageValidation;
+use App\Http\Requests\UpdatePackageValidation;
 use App\Models\OurPackage;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,8 @@ class OurPackageController extends Controller
      */
     public function index()
     {
-        //
+        $packages = OurPackage::all();
+        return view('package.index', compact('packages'));
     }
 
     /**
@@ -24,29 +27,14 @@ class OurPackageController extends Controller
      */
     public function create()
     {
-        //
+        return view('package.add');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(StorePackageValidation $request)
     {
-        //
-    }
+        OurPackage::create($request->validated());
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\OurPackage  $ourPackage
-     * @return \Illuminate\Http\Response
-     */
-    public function show(OurPackage $ourPackage)
-    {
-        //
+        return redirect()->route('our-package.index')->with('success', 'Berhasil menambah package baru');
     }
 
     /**
@@ -57,7 +45,7 @@ class OurPackageController extends Controller
      */
     public function edit(OurPackage $ourPackage)
     {
-        //
+        return view('package.edit', compact('ourPackage'));
     }
 
     /**
@@ -67,9 +55,11 @@ class OurPackageController extends Controller
      * @param  \App\Models\OurPackage  $ourPackage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OurPackage $ourPackage)
+    public function update(UpdatePackageValidation $request, OurPackage $ourPackage)
     {
-        //
+        $ourPackage->update($request->validated());
+
+        return redirect()->route('our-package.index')->with('success', 'Berhasil menambah package baru');
     }
 
     /**
@@ -80,6 +70,8 @@ class OurPackageController extends Controller
      */
     public function destroy(OurPackage $ourPackage)
     {
-        //
+        $ourPackage->delete();
+
+        return redirect()->back()->with('success', 'Berhasil menambah package baru');
     }
 }

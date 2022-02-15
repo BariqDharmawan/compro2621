@@ -14,6 +14,6 @@ class OurFeatureSeeder extends Seeder
      */
     public function run()
     {
-        OurFeature::factory()->count(4)->create();
+        OurFeature::factory()->count(6)->create();
     }
 }
