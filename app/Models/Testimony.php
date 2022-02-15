@@ -9,7 +9,7 @@ class Testimony extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['fullname', 'desc', 'review_at'];
+    protected $fillable = ['fullname', 'desc', 'review_at', 'avatar'];
     protected $casts = [
         'review_at' => 'datetime',
     ];

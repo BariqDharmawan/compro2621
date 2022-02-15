@@ -7,79 +7,54 @@ use Illuminate\Http\Request;
 
 class TestimonyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $testimonies = Testimony::all();
+
+        return view('testimony.index', compact('testimonies'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('testimony.create', compact('testimonies'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'fullname' => ['required', 'string', 'min:3', 'max:100'],
+            'review_at' => ['required']
+        ]);
+
+        Testimony::create([
+            'fullname' => $request->fullname,
+            'review_at' => $request->review_at
+        ]);
+
+        return redirect()->route('testimony.index')->with('success', 'Berhasil menambah testimony');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Testimony  $testimony
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Testimony $testimony)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Testimony  $testimony
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Testimony $testimony)
     {
-        //
+        return view('testimony.edit', compact('testimony'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Testimony  $testimony
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Testimony $testimony)
     {
-        //
+        $testimony->update([
+            'fullname' => $request->fullname,
+            'desc' => $request->desc,
+            'review_at' => $request->review_at
+        ]);
+
+        return redirect()->route('testimony.index')->with('success', 'Berhasil mengubah testimony ' . $testimony->fullname);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Testimony  $testimony
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Testimony $testimony)
     {
-        //
+        $testimony->delete();
+
+        return redirect()->back()->with('success', 'Berhasil menghapus testimony');
     }
 }
