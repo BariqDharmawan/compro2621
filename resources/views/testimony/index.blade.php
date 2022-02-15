@@ -12,12 +12,18 @@
 
     <div class="grid grid-cols-3 gap-5">
         @foreach ($testimonies as $testimony)
-        <x-card class="flex flex-col" class-footer="flex justify-between mt-auto border-t border-t-gray-200 pt-4 mt-auto">
-            <img src="{{ Avatar::create($testimony->fullname)->toBase64() }}" alt=""
-            class="block mx-auto mb-3" height="50px" width="50px">
+        <x-card class="flex flex-col items-center"
+        class-footer="flex justify-between w-full mt-auto border-t border-t-gray-200 pt-4">
+            <img src="{{ is_null($testimony->avatar) ? Avatar::create($testimony->fullname)->toBase64() : Storage::url($testimony->avatar) }}" alt=""
+            class="block mx-auto mb-3 rounded-full object-cover" height="50px" width="50px">
 
-            <p class="font-semibold text-lg text-center mb-2">{{ $testimony->fullname }}</p>
+
+            <p class="font-semibold text-lg text-center mb-1">{{ $testimony->fullname }}</p>
+            <time datetime="{{ $testimony->review_at }}" class="block text-center text-xs mb-3">
+                Review at: {{ $testimony->review_at->format('d M Y') }}
+            </time>
             <p class="text-justify">{{ $testimony->desc }}</p>
+
 
             <x-slot name="footer">
                 <form action="{{ route('testimony.destroy', $testimony->id) }}" method="post">

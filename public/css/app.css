@@ -2055,6 +2055,12 @@ select{
 .mt-9{
   margin-top: 2.25rem;
 }
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+.mb-1{
+  margin-bottom: 0.25rem;
+}
 .block{
   display: block;
 }
@@ -2211,6 +2217,9 @@ select{
 }
 .content-start{
   align-content: flex-start;
+}
+.items-start{
+  align-items: flex-start;
 }
 .items-end{
   align-items: flex-end;

@@ -17,7 +17,7 @@ class TestimonyController extends Controller
 
     public function create()
     {
-        return view('testimony.create', compact('testimonies'));
+        return view('testimony.create');
     }
 
     public function store(Request $request)
@@ -27,9 +27,19 @@ class TestimonyController extends Controller
             'review_at' => ['required']
         ]);
 
+        $avatar = null;
+        if ($request->hasFile('avatar')) {
+            $img = $request->file('avatar');
+            $imgPath = $img->store('public/testimony');
+
+            $avatar = $imgPath;
+        }
+
         Testimony::create([
             'fullname' => $request->fullname,
-            'review_at' => $request->review_at
+            'desc' => $request->desc,
+            'review_at' => $request->review_at,
+            'avatar' => $avatar
         ]);
 
         return redirect()->route('testimony.index')->with('success', 'Berhasil menambah testimony');
@@ -42,11 +52,18 @@ class TestimonyController extends Controller
 
     public function update(Request $request, Testimony $testimony)
     {
-        $testimony->update([
-            'fullname' => $request->fullname,
-            'desc' => $request->desc,
-            'review_at' => $request->review_at
-        ]);
+        $testimony->fullname = $request->fullname;
+        $testimony->desc = $request->desc;
+        $testimony->review_at = $request->review_at;
+
+        if ($request->hasFile('avatar')) {
+            $img = $request->file('avatar');
+            $imgPath = $img->store('public/testimony');
+
+            $testimony->avatar = $imgPath;
+        }
+
+        $testimony->save();
 
         return redirect()->route('testimony.index')->with('success', 'Berhasil mengubah testimony ' . $testimony->fullname);
     }

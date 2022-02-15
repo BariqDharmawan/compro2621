@@ -17,7 +17,7 @@ class CreateOurFeaturesTable extends Migration
             $table->id();
             $table->string('img');
             $table->string('title');
-            $table->string('desc');
+            $table->text('desc');
             $table->timestamps();
         });
     }

@@ -86,11 +86,9 @@
 
             <main class="h-full overflow-y-auto">
                 <div class="container px-6 mx-auto grid py-6">
-                    <div>
-                        <h2 class="my-6 text-2xl font-semibold text-gray-700">
-                            {{ $header }}
-                        </h2>
-                    </div>
+                    <h2 class="mb-6 text-2xl font-semibold text-gray-700">
+                        {{ $header }}
+                    </h2>
                     {{ $slot }}
                 </div>
             </main>

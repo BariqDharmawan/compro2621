@@ -17,7 +17,7 @@ class CreateTestimoniesTable extends Migration
             $table->id();
             $table->string('fullname');
             $table->text('desc');
-            $table->string('avatar');
+            $table->string('avatar')->nullable();
             $table->timestamp('review_at');
         });
     }
