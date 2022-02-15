@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('template/assets/fonts/lineicons/font-css/LineIcons.css') }}">
 
     <!--====== Tailwind CSS ======-->
-    <link rel="stylesheet" href="{{ asset('template/assets/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/assets/css/tailwind.css') }}">
 
 </head>
 
