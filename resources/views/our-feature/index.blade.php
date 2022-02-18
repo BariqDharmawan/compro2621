@@ -18,11 +18,11 @@
         <div class="grid grid-cols-3 gap-5">
             @foreach ($features as $feature)
                 <x-card shadow="none" class="flex flex-col">
-                    <img src="{{ Storage::url($feature->img) }}" alt="" height="80px" width="80px"
-                    class="block mx-auto rounded-full">
+                    <img src="{{ Storage::url('feature/' . $feature->img) }}" alt=""
+                    class="block mx-auto rounded-full w-20 h-20 mb-3 object-cover">
 
                     <div class="mb-4">
-                        <p class="font-semibold mb-3">{{ $feature->title }}</p>
+                        <p class="font-semibold mb-3 text-center">{{ $feature->title }}</p>
                         <p>{{ $feature->desc }}</p>
                     </div>
 
@@ -39,7 +39,7 @@
                         </form>
 
                         <a href="{{ route('our-feature.edit', $feature->id) }}"
-                            class="bg-yellow-400 text-white py-2 px-4 rounded-full">Ubah</a>
+                        class="bg-yellow-400 text-white py-2 px-4 rounded-full">Ubah</a>
                     </div>
                 </x-card>
             @endforeach

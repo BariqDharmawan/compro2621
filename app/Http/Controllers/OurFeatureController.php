@@ -49,10 +49,10 @@ class OurFeatureController extends Controller
         OurFeature::create([
             'title' => $request->title,
             'desc' => $request->desc,
-            'img' => $imgPath
+            'img' => str_replace('public/feature', '', $imgPath)
         ]);
 
-        return redirect()->back()->with('success', 'Berhasil menambah fitur baru');
+        return redirect()->route('our-feature.index')->with('success', 'Berhasil menambah fitur baru');
     }
 
     /**
@@ -79,14 +79,14 @@ class OurFeatureController extends Controller
             $img = $request->file('img');
             $imgPath = $img->store('public/feature');
 
-            $ourFeature->img = $imgPath;
+            $ourFeature->img = str_replace('public/feature', '', $imgPath);
         }
 
         $ourFeature->title = $request->title;
         $ourFeature->desc = $request->desc;
         $ourFeature->save();
 
-        return redirect()->back()->with('success', 'Berhasil mengubah fitur ' . $ourFeature->title);
+        return redirect()->route('our-feature.index')->with('success', 'Berhasil mengubah fitur ' . $ourFeature->title);
     }
 
     /**
@@ -100,6 +100,6 @@ class OurFeatureController extends Controller
         $name = $ourFeature->title;
         $ourFeature->delete();
 
-        return redirect()->back()->with('success', 'Berhasil menghapus fitur ' . $name);
+        return redirect()->route('our-feature.index')->with('success', 'Berhasil menghapus fitur ' . $name);
     }
 }

@@ -25,7 +25,7 @@
     </div>
     @endisset
 
-    <div class="{{ $pd == '4' ? 'p-4' : 'p-' . $pd }}">
+    <div class="h-full flex flex-col {{ $pd == '4' ? 'p-4' : 'p-' . $pd }}">
         {{ $slot }}
     </div>
 
