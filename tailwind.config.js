@@ -10,6 +10,9 @@ module.exports = {
     ],
 
     theme: {
+        container: {
+            center: true
+        },
         themeVariants: ["dark"],
         Forms: (theme) => ({
             default: {

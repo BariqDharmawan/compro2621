@@ -6,10 +6,13 @@ use App\Http\Controllers\OurPackageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\UserController;
+use App\Models\OurFeature;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $features = OurFeature::all();
+
+    return view('welcome', compact('features'));
 });
 
 require __DIR__.'/auth.php';

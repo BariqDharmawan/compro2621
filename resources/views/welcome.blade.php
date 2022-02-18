@@ -61,7 +61,7 @@
             <div class="header_shape hidden lg:block"></div>
 
             <div class="header_image flex items-center">
-                <div class="image 2xl:pl-25">
+                <div class="image">
                     <img src="{{ asset('template/assets/images/header-image.svg') }}" alt="Header Image">
                 </div>
             </div> <!-- header image -->
@@ -79,48 +79,20 @@
                 </div>
             </div> <!-- row -->
             <div class="row justify-center">
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
+                @foreach ($features as $feature)
+                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12 mb-7">
+                    <div class="single_services text-center mt-8 mx-3 h-full">
                         <div class="services_icon">
-                            <i class="lni lni-write"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
+                            <img src="{{ Storage::url('feature/' . $feature->img) }}" alt="" srcset=""
+                             class="rounded-full" style="width: 50px; height: 50px">
                         </div>
                         <div class="services_content mt-5">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">Research</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
+                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">{{ $feature->title }}</h3>
+                            <p class="mt-4">{{ $feature->desc }}</p>
                         </div>
                     </div> <!-- single services -->
                 </div>
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-bulb"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">Prototype</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="w-full sm:w-10/12 md:w-6/12 lg:w-4/12">
-                    <div class="single_services text-center mt-8 mx-3">
-                        <div class="services_icon">
-                            <i class="lni lni-checkmark-circle"></i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="94" height="92" viewBox="0 0 94 92">
-                                <path class="services_shape" id="Polygon_12" data-name="Polygon 12" d="M42.212,2.315a11,11,0,0,1,9.576,0l28.138,13.6a11,11,0,0,1,5.938,7.465L92.83,54.018A11,11,0,0,1,90.717,63.3L71.22,87.842A11,11,0,0,1,62.607,92H31.393a11,11,0,0,1-8.613-4.158L3.283,63.3A11,11,0,0,1,1.17,54.018L8.136,23.383a11,11,0,0,1,5.938-7.465Z" />
-                            </svg>
-                        </div>
-                        <div class="services_content mt-5">
-                            <h3 class="services_title text-black font-semibold text-xl md:text-3xl">Build</h3>
-                            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadi aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores </p>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
+                @endforeach
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
