@@ -117,30 +117,21 @@
                         </div> <!-- section title -->
                         <p>Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergren, no sea takimata sanctus. </p>
                         <ul class="about_list pt-3">
+                            @foreach ($packages as $package)
                             <li class="flex mt-5">
                                 <div class="about_check">
                                     <i class="lni lni-checkmark-circle"></i>
                                 </div>
                                 <div class="about_list_content pl-5 pr-2">
-                                    <p>Vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
+                                    <p>{{ $package->judul }}</p>
+                                    <p>
+                                        Rp.
+                                        <del>{{ number_format($package->harga_lama) }}</del>
+                                        <var class="not-italic">{{ $package->harga_baru }}</var>
+                                    </p>
                                 </div>
                             </li>
-                            <li class="flex mt-5">
-                                <div class="about_check">
-                                    <i class="lni lni-checkmark-circle"></i>
-                                </div>
-                                <div class="about_list_content pl-5 pr-2">
-                                    <p>At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                                </div>
-                            </li>
-                            <li class="flex mt-5">
-                                <div class="about_check">
-                                    <i class="lni lni-checkmark-circle"></i>
-                                </div>
-                                <div class="about_list_content pl-5 pr-2">
-                                    <p>Dvero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergrenv</p>
-                                </div>
-                            </li>
+                            @endforeach
                         </ul>
                     </div> <!-- about content -->
                 </div>
@@ -164,31 +155,39 @@
             </div> <!-- row -->
             <div class="team-wrapper relative">
                 <div class="row team_active py-3">
-                    @for ($i = 1; $i <= 5; $i++)
-                        <div class="w-full lg:w-4/12h">
+                    @foreach ($testimonies as $testimony)
+                        <div class="w-full lg:w-4/12 mb-5">
                             <div class="single_team_item h-full mx-auto">
-                                <div class="single_team my-0 mx-3 h-full">
-                                    <div class="team_image relative">
-                                        <img src="{{ asset('template/assets/images/team-' . $i . '.jpg') }}"
-                                        alt="team" class="w-full">
-                                        <ul class="social absolute top-4 right-8">
-                                            <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
-                                            <li><a href="#"><i class="lni lni-twitter-filled"></i></a></li>
-                                            <li><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+                                <div class="single_team my-0 mx-3 h-full relative">
+                                    <div class="team_image">
+                                        <img src="{{ is_null($testimony->avatar) ?
+                                        Avatar::create($testimony->fullname)->toBase64() :
+                                        Storage::url('testimony/' . $testimony->avatar) }}"
+                                        alt="team" class="w-16 h-16 object-cover mx-auto mt-5">
+                                        <ul class="social absolute bottom-2 right-4 left-4 z-10 px-1
+                                        opacity-0 group-hover:opacity-100 bg-white rounded-full flex gap-3 items-center py-1 justify-center">
+                                            <li><a href="#" class="text-red-600 hover:text-white"><i class="lni lni-facebook-filled"></i></a></li>
+                                            <li><a href="#" class="text-red-600 hover:text-white"><i class="lni lni-twitter-filled"></i></a></li>
+                                            <li><a href="#" class="text-red-600 hover:text-white"><i class="lni lni-linkedin-original"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="team_content py-5 px-8 relative">
-                                        <h4 class="team_name text-xl md:text-2xl">
-                                            <a href="#" class="text-black group-hover:text-white">Chris Dave</a>
+                                        <h4 class="team_name text-xl md:text-2xl text-center">
+                                            <a href="#" class="text-black group-hover:text-white">
+                                                {{ $testimony->fullname }}
+                                            </a>
+                                            <time class="block text-sm font-semibold text-gray-700 group-hover:text-white">
+                                                {{ $testimony->review_at->format('d M Y') }}
+                                            </time>
                                         </h4>
-                                        <p class="mt-2 transition-all duration-300 group-hover:text-white">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, qui sint! Suscipit eius cumque molestiae totam officia animi sint consequuntur?
+                                        <p class="mt-2 text-center transition-all duration-300 group-hover:text-white">
+                                            {{ $testimony->desc }}
                                         </p>
                                     </div>
                                 </div> <!-- single team -->
                             </div>
                         </div>
-                    @endfor
+                    @endforeach
                 </div> <!-- row -->
             </div>
         </div> <!-- container -->

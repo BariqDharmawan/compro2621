@@ -14,7 +14,8 @@
         @foreach ($testimonies as $testimony)
         <x-card class="flex flex-col items-center"
         class-footer="flex justify-between w-full mt-auto border-t border-t-gray-200 pt-4">
-            <img src="{{ is_null($testimony->avatar) ? Avatar::create($testimony->fullname)->toBase64() : Storage::url($testimony->avatar) }}" alt=""
+            <img src="{{ is_null($testimony->avatar) ? Avatar::create($testimony->fullname)->toBase64() :
+            Storage::url('testimony/'. $testimony->avatar) }}" alt=""
             class="block mx-auto mb-3 rounded-full object-cover w-16 h-16 object-cover">
 
 

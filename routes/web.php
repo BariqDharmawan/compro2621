@@ -7,12 +7,16 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\UserController;
 use App\Models\OurFeature;
+use App\Models\OurPackage;
+use App\Models\Testimony;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $features = OurFeature::all();
+    $packages = OurPackage::all();
+    $testimonies = Testimony::all();
 
-    return view('welcome', compact('features'));
+    return view('welcome', compact('features', 'packages', 'testimonies'));
 });
 
 require __DIR__.'/auth.php';

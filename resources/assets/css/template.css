@@ -9934,7 +9934,6 @@ a, button {
 }
 
 .team_image .social li {
-  margin-top: 16px;
   opacity: 0;
   visibility: hidden;
   --tw-translate-x: 0;
@@ -9957,10 +9956,6 @@ a, button {
   background-color: rgba(249, 79, 79, var(--tw-bg-opacity));
 }
 
-.team_image .social li a{
-  --tw-border-opacity: 1;
-  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
-}
 
 .team_image .social li a:hover{
   --tw-border-opacity: 1;
@@ -9969,15 +9964,12 @@ a, button {
 
 .team_image .social li a{
   border-radius: 9999px;
-  border-style: solid;
-  border-width: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
+  height: 20px;
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-  width: 36px;
+  width: 20px;
 }
 
 .single_team:hover .social li {
@@ -9987,7 +9979,6 @@ a, button {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  transition-duration: 300ms;
 }
 
 .single_team:hover .social li:nth-child(1) {

@@ -39,7 +39,7 @@ class TestimonyController extends Controller
             'fullname' => $request->fullname,
             'desc' => $request->desc,
             'review_at' => $request->review_at,
-            'avatar' => $avatar
+            'avatar' => str_replace('public/testimony', '', $avatar)
         ]);
 
         return redirect()->route('testimony.index')->with('success', 'Berhasil menambah testimony');
