@@ -58,46 +58,44 @@
         <div class="container">
             <div class="footer_widget pt-18 pb-120">
                 <div class="row justify-center">
-                    <div class="w-full md:w-1/2 lg:w-3/12">
+                    <div class="md:w-1/2 lg:w-3/12">
                         <div class="footer_about mt-13 mx-3">
                             <div class="footer_logo">
                                 <a href="#"><img src="{{ asset('template/assets/images/logo-footer.svg') }}" alt=""></a>
                             </div>
                             <div class="footer_content mt-8">
-                                <p class="text-white">Lorem ipsum dolor sitco nsetetu nonumy eirmod tempor invidunt ut labore et dolore magna uyam erat, sed diam.</p>
+                                <p class="text-white">{{ $headContent->desc }}</p>
                             </div>
                         </div> <!-- footer about -->
                     </div>
-                    <div class="w-full md:w-1/2 lg:w-5/12">
+                    <div class="flex-grow">
                         <div class="footer_link_wrapper flex flex-wrap mx-3">
                             <div class="footer_link w-1/2 md:pl-13 mt-13">
                                 <h2 class="footer_title text-xl font-semibold text-white">Quick Links</h2>
                                 <ul class="link pt-4">
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Company</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Privacy Policy</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">About</a></li>
+                                    <li>
+                                        <a href="#home" class="text-white mt-4 hover:text-theme-color">
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-feature" class="text-white mt-4 hover:text-theme-color">
+                                            Fitur
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-package" class="text-white mt-4 hover:text-theme-color">
+                                            Paket
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#section-testimony" class="text-white mt-4 hover:text-theme-color">
+                                            Testimoni
+                                        </a>
+                                    </li>
                                 </ul>
-                            </div> <!-- footer link -->
-                            <div class="footer_link w-1/2 md:pl-13 mt-13">
-                                <h2 class="footer_title text-xl font-semibold text-white">Resources</h2>
-                                <ul class="link pt-4">
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Support</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Contact</a></li>
-                                    <li><a href="#" class="text-white mt-4 hover:text-theme-color">Terms</a></li>
-                                </ul>
-                            </div> <!-- footer link -->
-                        </div> <!-- footer link wrapper -->
-                    </div>
-                    <div class="w-full md:w-2/3 lg:w-4/12">
-                        <div class="footer_subscribe mt-13 mx-3">
-                            <h2 class="footer_title text-xl font-semibold text-white">Newsletter</h2>
-                            <div class="subscribe_form text-right mt-9 relative">
-                                <form action="#">
-                                    <input type="text" placeholder="Enter email" class="w-full py-5 px-6 bg-white text-black rounded-full border-none">
-                                    <button class="main-btn subscribe-btn">Subscribe</button>
-                                </form>
                             </div>
-                        </div> <!-- footer subscribe -->
+                        </div> <!-- footer link wrapper -->
                     </div>
                 </div> <!-- row -->
             </div> <!-- footer widget -->
@@ -111,7 +109,7 @@
                     </ul>
                 </div> <!-- footer social -->
                 <div class="footer_copyright_content pt-4 text-center">
-                    <p class="text-white">Designed and Developed by <a href="https://uideck.com" rel="nofollow" class="text-white hover:text-theme-color">UIdeck</a> and <a href="https://tailwindtemplates.co" rel="nofollow" class="text-white hover:text-theme-color">Tailwind Templates</a></p>
+                    <p class="text-white">Copyright &copy; {{ config('app.name') }} {{ date('Y') }}</p>
                 </div> <!-- footer copyright content -->
             </div> <!-- footer copyright -->
         </div> <!-- container -->

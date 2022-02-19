@@ -6,6 +6,7 @@ use App\Http\Controllers\OurPackageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonyController;
 use App\Http\Controllers\UserController;
+use App\Models\HeaderContent;
 use App\Models\OurFeature;
 use App\Models\OurPackage;
 use App\Models\Testimony;
@@ -15,8 +16,9 @@ Route::get('/', function () {
     $features = OurFeature::all();
     $packages = OurPackage::all();
     $testimonies = Testimony::all();
+    $headContent = HeaderContent::first();
 
-    return view('welcome', compact('features', 'packages', 'testimonies'));
+    return view('welcome', compact('features', 'packages', 'testimonies', 'headContent'));
 });
 
 require __DIR__.'/auth.php';
