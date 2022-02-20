@@ -1392,80 +1392,17 @@ a, button {
 
 /* =========== hero =========== */
 
-.header_hero {
-  height: 900px;
+@media screen and (min-width: 1400px) {
+    .header_hero {
+      height: 80vh;
+    }
 }
 
-@media (max-width: 1400px) {
-  .header_hero {
-    height: 800px;
-  }
-}
 
 .hero_shape {
   opacity: 0.4;
   position: absolute;
   z-index: -10;
-}
-
-.shape_1 {
-  top: 150px;
-  left: 10%;
-}
-
-.shape_2{
-  top: 150px;
-  left: 30%;
-}
-
-.shape_3{
-  top: 200px;
-  left: 40%;
-}
-
-.shape_4{
-  top: 120px;
-  left: 50%;
-}
-
-.shape_5{
-  top: 40%;
-  left: 14%;
-}
-
-.shape_6{
-  top: 34%;
-  left: 48%;
-}
-
-.shape_7{
-  top: 60%;
-  left: 80px;
-}
-
-.shape_8{
-  top: 55%;
-  left: 38%;
-}
-
-.shape_9{
-  bottom: 100px;
-  left: 13%;
-}
-
-.shape_10{
-  bottom: 200px;
-  left: 25%;
-}
-
-.shape_11{
-  bottom: 80px;
-  left: 35%;
-}
-
-.shape_12{
-  bottom: 25%;
-  left: 42%;
 }
 
 .header_shape {
@@ -1474,17 +1411,6 @@ a, button {
   top: 0px;
   right: 0px;
   width: 50%;
-}
-
-.header_shape::before {
-  content: '';
-  background-color: #F5F5FC;
-  transform: skewX(-15deg);
-  width: 200%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
 }
 
 .header_image {

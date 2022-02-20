@@ -119,7 +119,7 @@
 
     <script src="{{ asset('template/assets/js/tiny-slider.js') }}"></script>
     <script src="{{ asset('template/assets/js/wow.min.js') }}"></script>
-
+    @stack('scripts')
     <script src="{{ asset('template/assets/js/main.js') }}"></script>
 
 </body>

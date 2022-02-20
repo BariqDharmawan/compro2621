@@ -7,44 +7,10 @@
 
     <!--====== HEADER PART START ======-->
 
-    <section class="header_area">
+    <section class="header_area" id="header-area">
         @include('partials.nav')
 
-        <div id="home" class="header_hero bg-gray relative z-10 overflow-hidden lg:flex items-center">
-            <div class="hero_shape shape_1">
-                <img src="{{ asset('template/assets/images/shape/shape-1.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_2">
-                <img src="{{ asset('template/assets/images/shape/shape-2.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_3">
-                <img src="{{ asset('template/assets/images/shape/shape-3.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_4">
-                <img src="{{ asset('template/assets/images/shape/shape-4.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_6">
-                <img src="{{ asset('template/assets/images/shape/shape-1.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_7">
-                <img src="{{ asset('template/assets/images/shape/shape-4.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_8">
-                <img src="{{ asset('template/assets/images/shape/shape-3.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_9">
-                <img src="{{ asset('template/assets/images/shape/shape-2.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_10">
-                <img src="{{ asset('template/assets/images/shape/shape-4.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_11">
-                <img src="{{ asset('template/assets/images/shape/shape-1.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-            <div class="hero_shape shape_12">
-                <img src="{{ asset('template/assets/images/shape/shape-2.svg') }}" alt="shape">
-            </div><!-- hero shape -->
-
+        <div id="home" class="header_hero relative z-10 overflow-hidden lg:flex items-center">
             <div class="container">
                 <div class="row">
                     <div class="w-full lg:w-1/2">
@@ -62,10 +28,8 @@
             </div> <!-- container -->
             <div class="header_shape hidden lg:block"></div>
 
-            <div class="header_image flex items-center">
-                <div class="image">
-                    <img src="{{ asset('template/assets/images/header-image.svg') }}" alt="Header Image">
-                </div>
+            <div class="header_image flex items-center px-14">
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/w1a1KivDALc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
             </div> <!-- header image -->
         </div> <!-- header hero -->
     </section>
@@ -104,46 +68,53 @@
     <!--====== ABOUT PART START ======-->
 
     <section id="section-package" class="about_area pt-120 relative">
-        <div class="about_image flex items-end justify-end">
-            <div class="image lg:pr-13">
-                <img src="{{ asset('template/assets/images/about.svg') }}" alt="about">
-            </div>
-        </div> <!-- about image -->
         <div class="container">
-            <div class="row justify-end">
-                <div class="w-full lg:w-1/2">
-                    <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
-                        <div class="section_title pb-9">
-                            <h5 class="sub_title">Paket</h5>
-                            <h4 class="main_title">Paket yang kami tawarkan antara lain</h4>
-                        </div> <!-- section title -->
-                        <p>Nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua. At vero eos et accusam et justo duo dolores et rebum. Stet clita kasd gubergren, no sea takimata sanctus. </p>
-                        <ul class="about_list pt-3">
-                            @foreach ($packages as $package)
-                            <li class="flex mt-5">
-                                <div class="about_check">
-                                    <i class="lni lni-checkmark-circle"></i>
-                                </div>
-                                <div class="about_list_content pl-5 pr-2">
-                                    <p>{{ $package->judul }}</p>
-                                    <p>
-                                        Rp.
-                                        <del>{{ number_format($package->harga_lama) }}</del>
-                                        <var class="not-italic">{{ $package->harga_baru }}</var>
-                                    </p>
-                                </div>
-                            </li>
-                            @endforeach
-                        </ul>
-                    </div> <!-- about content -->
+            <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
+                <div class="section_title pb-9">
+                    <h5 class="sub_title">Paket</h5>
+                    <h4 class="main_title">Paket yang kami tawarkan antara lain</h4>
+                </div> <!-- section title -->
+                <div class="flex pt-3">
+                    @foreach ($packages as $package)
+                    <div class="w-4/12 flex flex-col items-center">
+                        <div class="about_list_content w-full">
+                            <p class="font-bold">{{ $package->judul }}</p>
+                            <p>
+                                Rp.
+                                <del>{{ number_format($package->harga_lama) }}</del>
+                                <var class="not-italic">{{ number_format($package->harga_baru) }}</var>
+                            </p>
+                        </div>
+                        <div class="py-3 wyswyg-package">{!! $package->deskripsi !!}</div>
+                        <a href="" class="mt-4 inline-flex bg-green-lemon hover:bg-green-200 text-gray-800 font-semibold p-3 rounded-md">
+                            Daftar Sekarang
+                        </a>
+
+                        <small class="text-gray-400 text-center block mt-2">
+                            Dapatkan juga Extra Diskon dengan memasukkan kode promo atau referral
+                        </small>
+                    </div>
+                    @endforeach
                 </div>
-            </div> <!-- row -->
+            </div> <!-- about content -->
         </div> <!-- container -->
     </section>
 
-    <!--====== ABOUT PART ENDS ======-->
-
-    <!--====== SERVICES PART START ======-->
+    <section>
+        <div class="container">
+            <div class="section_title text-center">
+                <h4 class="main_title">Metode Pembayaran</h4>
+                <h5 class="sub_title mt-2">Tersedia beragam pilihan kemudahan dalam melakukan pembayaran</h5>
+            </div>
+            <div class="flex flex-wrap mt-4 justify-center">
+                @for ($i = 0; $i < 12; $i++)
+                <div class="w-1/5 px-2 mb-4">
+                    <img src="https://pmb.upr.ac.id/asset/foto_berita/New_Project_(4).png" alt="" srcset="">
+                </div>
+                @endfor
+            </div>
+        </div>
+    </section>
 
     <section id="section-testimony" class="team_area bg-gray pt-120 pb-120">
         <div class="container">
@@ -151,7 +122,7 @@
                 <div class="w-full lg:w-1/2">
                     <div class="section_title text-center pb-6">
                         <h5 class="sub_title">Testimony</h5>
-                        <h4 class="main_title">What people say about us</h4>
+                        <h4 class="main_title">What People Say About Us</h4>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -199,3 +170,25 @@
 
     <!--====== CONTACT PART ENDS ======-->
 @endsection
+
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+    <script>
+        VANTA.DOTS({
+            el: "#header-area",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: '#c9e265',
+            color2: '#c9e265',
+            backgroundColor: 0xffffff,
+            size: 10.00,
+            spacing: 87.00
+        })
+    </script>
+@endpush

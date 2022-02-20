@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $features = OurFeature::all();
     $packages = OurPackage::all();
+
     $testimonies = Testimony::all();
     $headContent = HeaderContent::first();
 
