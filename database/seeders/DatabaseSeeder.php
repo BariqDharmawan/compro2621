@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             HeaderContentSeeder::class,
             OurFeatureSeeder::class,
             OurPackageSeeder::class,
-            TestimonySeeder::class
+            TestimonySeeder::class,
+            PayOptionSeeder::class
         ]);
     }
 }
