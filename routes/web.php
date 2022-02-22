@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Models\HeaderContent;
 use App\Models\OurFeature;
 use App\Models\OurPackage;
+use App\Models\PayOption;
 use App\Models\Testimony;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,9 @@ Route::get('/', function () {
     $testimonies = Testimony::all();
     $headContent = HeaderContent::first();
 
-    return view('welcome', compact('features', 'packages', 'testimonies', 'headContent'));
+    $payOptions = PayOption::all();
+
+    return view('welcome', compact('features', 'packages', 'testimonies', 'headContent', 'payOptions'));
 });
 
 require __DIR__.'/auth.php';

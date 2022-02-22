@@ -106,12 +106,12 @@
                 <h4 class="main_title">Metode Pembayaran</h4>
                 <h5 class="sub_title mt-2">Tersedia beragam pilihan kemudahan dalam melakukan pembayaran</h5>
             </div>
-            <div class="flex flex-wrap mt-4 justify-center">
-                @for ($i = 0; $i < 12; $i++)
+            <div class="flex flex-wrap mt-6 justify-center">
+                @foreach ($payOptions as $payOption)
                 <div class="w-1/5 px-2 mb-4">
-                    <img src="https://pmb.upr.ac.id/asset/foto_berita/New_Project_(4).png" alt="" srcset="">
+                    <img src="{{ Storage::url('pay-option/' . $payOption->img) }}" alt="" srcset="" class="h-24 w-24 mx-auto">
                 </div>
-                @endfor
+                @endforeach
             </div>
         </div>
     </section>
