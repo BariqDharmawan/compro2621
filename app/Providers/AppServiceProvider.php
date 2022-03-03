@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\ComproDetail;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        try {
+            $comproDetail = ComproDetail::first();
+
+            View::share('comproDetail', $comproDetail);
+
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }

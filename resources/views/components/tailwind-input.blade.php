@@ -57,7 +57,7 @@
             'id' => $id ?? Str::slug($name),
             'name' => $name,
             'rows' => $rows,
-        ]) }}>@isset($value){{ $value }}@else @isset($data){{ $data->{$name} }}@else {{ old($name) }}@endisset @endisset</textarea>
+        ]) }}>@isset($value){{ preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $value) }}@else @isset($data){{ preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $data->{$name}) }}@else {{ old($name) }}@endisset @endisset</textarea>
     @break
 
     @case('file-custom')

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ComproDetail;
 use App\Models\OurFeature;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,6 @@ class OurFeatureController extends Controller
     public function index()
     {
         $features = OurFeature::all();
-        // dd($features);
         return view('our-feature.index', compact('features'));
     }
 

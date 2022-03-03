@@ -64,7 +64,7 @@
                                 <a href="#"><img src="{{ asset('template/assets/images/logo-footer.svg') }}" alt=""></a>
                             </div>
                             <div class="footer_content mt-8">
-                                <p class="text-white">{{ $headContent->desc }}</p>
+                                <p class="text-white">{{ $comproDetail->summary }}</p>
                             </div>
                         </div> <!-- footer about -->
                     </div>
@@ -109,7 +109,7 @@
                     </ul>
                 </div> <!-- footer social -->
                 <div class="footer_copyright_content pt-4 text-center">
-                    <p class="text-white">Copyright &copy; {{ config('app.name') }} {{ date('Y') }}</p>
+                    <p class="text-white">Copyright &copy; {{ $comproDetail->name }} {{ date('Y') }}</p>
                 </div> <!-- footer copyright content -->
             </div> <!-- footer copyright -->
         </div> <!-- container -->

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComproDetailController;
 use App\Http\Controllers\HeaderContentController;
 use App\Http\Controllers\OurFeatureController;
 use App\Http\Controllers\OurPackageController;
@@ -34,6 +35,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('our-package', OurPackageController::class);
     Route::resource('testimony', TestimonyController::class);
     Route::resource('pay-option', PayOptionController::class);
+    Route::resource('compro', ComproDetailController::class);
+
     Route::get('profile', [ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
 });

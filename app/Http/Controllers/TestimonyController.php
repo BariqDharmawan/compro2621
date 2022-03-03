@@ -60,7 +60,7 @@ class TestimonyController extends Controller
             $img = $request->file('avatar');
             $imgPath = $img->store('public/testimony');
 
-            $testimony->avatar = $imgPath;
+            $testimony->avatar = str_replace('public/testimony', '', $imgPath);
         }
 
         $testimony->save();
