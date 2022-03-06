@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\ComproDetail;
+use App\Models\SocialMedia;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -27,8 +28,10 @@ class AppServiceProvider extends ServiceProvider
     {
         try {
             $comproDetail = ComproDetail::first();
+            $socials = SocialMedia::all();
 
             View::share('comproDetail', $comproDetail);
+            View::share('socials', $socials);
 
         } catch (\Throwable $th) {
             throw $th;

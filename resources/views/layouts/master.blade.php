@@ -49,12 +49,6 @@
     @yield('content')
 
     <footer id="footer" class="footer_area bg-green-lemon relative z-10">
-        <div class="shape absolute left-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
-            <img src="{{ asset('template/assets/images/footer-shape-left.png') }}" alt="">
-        </div>
-        <div class="shape absolute right-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
-            <img src="{{ asset('template/assets/images/footer-shape-right.png') }}" alt="">
-        </div>
         <div class="container">
             <div class="footer_widget pt-18 pb-120">
                 <div class="row justify-center">
@@ -102,12 +96,14 @@
             <div class="footer_copyright pt-3 pb-6 border-t-2 border-solid border-white border-opacity-10 sm:flex justify-between">
                 <div class="footer_social pt-4 mx-3 text-center">
                     <ul class="social flex justify-center sm:justify-start">
-
-                        <li class="mr-3">
-                            <a href="https://facebook.com/uideckHQ">
-                                <i class="lni lni-facebook-filled text-black"></i>
-                            </a>
-                        </li>
+                        @foreach ($socials as $social)
+                            <li class="mr-3">
+                                <a href="{{ $social->link }}">
+                                    <img src="{{ Storage::url('socials/' . $social->icon) }}" alt="" srcset=""
+                                    height="16px" width="16px">
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div> <!-- footer social -->
                 <div class="footer_copyright_content pt-4 text-center">

@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             OurPackageSeeder::class,
             TestimonySeeder::class,
             PayOptionSeeder::class,
-            ComproDetailSeeder::class
+            ComproDetailSeeder::class,
+            SocialMediaSeeder::class
         ]);
     }
 }

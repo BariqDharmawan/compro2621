@@ -25,6 +25,7 @@
     ])->merge(['name' => $name, 'id' => $id ?? Str::slug($name)]) }}>
         {{ $slot }}
     </select>
+    @break
 
     @case('wysiwyg')
     <div class="wysiwyg" id="wysiwyg-{{ $id ?? Str::slug($name) }}" data-placeholder="{{ $placeholder }}"
@@ -91,6 +92,7 @@
         'id' => $id ?? Str::slug($name),
         'value' => $value ?? old($name)
     ]) }} @isset($value) value="{{ $value }}" @endisset @isset($data) value="{{ $data->{$name} }}" @endisset>
+    @break
 
 @endswitch
 
