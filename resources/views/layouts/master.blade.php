@@ -48,7 +48,7 @@
 
     @yield('content')
 
-    <footer id="footer" class="footer_area bg-black relative z-10">
+    <footer id="footer" class="footer_area bg-green-lemon relative z-10">
         <div class="shape absolute left-0 top-0 opacity-5 h-full overflow-hidden w-1/3">
             <img src="{{ asset('template/assets/images/footer-shape-left.png') }}" alt="">
         </div>
@@ -61,7 +61,7 @@
                     <div class="md:w-1/2 lg:w-3/12">
                         <div class="footer_about mt-13 mx-3">
                             <div class="footer_logo">
-                                <a href="#"><img src="{{ asset('template/assets/images/logo-footer.svg') }}" alt=""></a>
+                                <a href="#"><img src="{{ Storage::url('compro/'. $comproDetail->logo) }}" alt="" class="h-28"></a>
                             </div>
                             <div class="footer_content mt-8">
                                 <p class="text-white">{{ $comproDetail->summary }}</p>
@@ -102,10 +102,12 @@
             <div class="footer_copyright pt-3 pb-6 border-t-2 border-solid border-white border-opacity-10 sm:flex justify-between">
                 <div class="footer_social pt-4 mx-3 text-center">
                     <ul class="social flex justify-center sm:justify-start">
-                        <li class="mr-3"><a href="https://facebook.com/uideckHQ"><i class="lni lni-facebook-filled"></i></a></li>
-                        <li class="mr-3"><a href="https://twitter.com/uideckHQ"><i class="lni lni-twitter-filled"></i></a></li>
-                        <li class="mr-3"><a href="https://instagram.com/uideckHQ"><i class="lni lni-instagram-original"></i></a></li>
-                        <li class="mr-3"><a href="#"><i class="lni lni-linkedin-original"></i></a></li>
+
+                        <li class="mr-3">
+                            <a href="https://facebook.com/uideckHQ">
+                                <i class="lni lni-facebook-filled text-black"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div> <!-- footer social -->
                 <div class="footer_copyright_content pt-4 text-center">

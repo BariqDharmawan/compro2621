@@ -3,7 +3,7 @@
         <div class="row items-center">
             <div class="w-full">
                 <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
-                    <a class="navbar-brand mr-5 font-bold text-black" href="index.html">
+                    <a class="navbar-brand mr-5 font-bold" href="index.html">
                         {{ config('app.name') }}
                     </a>
                     <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,6 +25,11 @@
                             </li>
                             <li class="nav-item ml-5 lg:ml-11">
                                 <a class="page-scroll" href="#section-testimony">Testimoni</a>
+                            </li>
+                            <li class="ml-5 lg:ml-11">
+                                <a href="https://soalpppk.id" class="btn-login rounded-full py-2 px-4" target="_blank">
+                                    Login
+                                </a>
                             </li>
                         </ul>
                     </div> <!-- navbar collapse -->

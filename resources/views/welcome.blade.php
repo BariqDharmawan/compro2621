@@ -20,7 +20,7 @@
                             </h2>
                             <p class="mt-8 lg:mr-8">{{ $headContent->desc }}</p>
                             <div class="hero_btn mt-10">
-                                <a class="main-btn" href="#0">Daftar sekarang</a>
+                                <a class="btn-pill btn-pill--md bg-green-lemon text-white hover:opacity-70" href="#0">Daftar sekarang</a>
                             </div>
                         </div> <!-- header hero content -->
                     </div>

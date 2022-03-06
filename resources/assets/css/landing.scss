@@ -4,4 +4,25 @@
 
 @import './template.css';
 
-@import './container', './box';
+.navbar-area.sticky {
+    @apply bg-green-lemon;
+
+    .nav-item a {
+        @apply text-gray-100;
+
+        &.active {
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
+
+.navbar-brand {
+    @apply text-green-lemon font-extrabold;
+
+    .navbar-area.sticky & {
+        @apply text-white;
+    }
+}
+
+@import './container', './box', './btn';

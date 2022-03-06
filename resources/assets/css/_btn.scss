@@ -1,0 +1,14 @@
+.btn-pill {
+    @apply rounded-full py-2 px-4;
+    &--md {
+        @apply py-3;
+    }
+}
+
+.btn-login {
+    @apply bg-green-lemon text-white;
+
+    .navbar-area.sticky & {
+        @apply bg-white text-green-lemon;
+    }
+}

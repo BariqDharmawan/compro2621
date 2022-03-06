@@ -1137,47 +1137,6 @@ a, button {
   flex-wrap: wrap;
 }
 
-.main-btn {
-  --tw-bg-opacity: 1;
-  background-color: rgba(56, 66, 77, var(--tw-bg-opacity));
-}
-
-.main-btn:hover{
-  --tw-bg-opacity: 0.8;
-}
-
-.main-btn{
-  border-radius: 9999px;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  overflow: hidden;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 40px;
-  padding-right: 40px;
-  position: relative;
-  text-align: center;
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.main-btn:hover{
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.main-btn{
-  z-index: 10;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-duration: 300ms;
-  border-top-right-radius: 0px;
-}
-
 .btn-hover {
   overflow: hidden;
   position: relative;
