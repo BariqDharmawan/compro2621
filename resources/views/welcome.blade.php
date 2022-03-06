@@ -29,7 +29,7 @@
             <div class="header_shape hidden lg:block"></div>
 
             <div class="header_image flex items-center px-14">
-                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/w1a1KivDALc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+                <iframe width="100%" height="300px" src="{{ str_replace('watch?v=', 'embed/', $comproDetail->video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
             </div> <!-- header image -->
         </div> <!-- header hero -->
     </section>

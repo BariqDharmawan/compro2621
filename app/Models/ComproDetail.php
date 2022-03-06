@@ -9,5 +9,5 @@ class ComproDetail extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'logo', 'summary'];
+    protected $fillable = ['name', 'logo', 'summary', 'video'];
 }

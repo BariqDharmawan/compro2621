@@ -17,6 +17,7 @@ class CreateComproDetailsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('summary');
+            $table->string('video');
             $table->string('logo')->nullable();
             $table->timestamps();
         });
