@@ -1,4 +1,4 @@
-import Quill from 'Quill';
+import Quill from 'quill';
 
 const fileInput = document.getElementById('upload');
 if (fileInput) {
