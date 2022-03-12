@@ -1,16 +1,16 @@
 @extends('layouts.master')
 
-@section('title', 'Homepage')
+@section('title', 'SOAL PPPK')
 
 @section('content')
     <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== HEADER PART START ======-->
 
-    <section class="header_area" id="header-area">
+    <section class="header_area lg:pt-32 xl:pt-20" id="header-area">
         @include('partials.nav')
 
-        <div id="home" class="header_hero relative z-10 overflow-hidden lg:flex items-center">
+        <div id="home" class="header_hero relative z-10 lg:flex items-center">
             <div class="container">
                 <div class="row">
                     <div class="w-full lg:w-1/2">
@@ -20,7 +20,8 @@
                             </h2>
                             <p class="mt-8 lg:mr-8">{{ $headContent->desc }}</p>
                             <div class="hero_btn mt-10">
-                                <a class="btn-pill btn-pill--md bg-green-lemon text-white hover:opacity-70" href="#0">Daftar sekarang</a>
+                                <a class="btn-pill btn-pill--md bg-green-lemon text-white hover:opacity-70"
+                                href="https://soalpppk.id/register">Daftar sekarang</a>
                             </div>
                         </div> <!-- header hero content -->
                     </div>
@@ -28,8 +29,8 @@
             </div> <!-- container -->
             <div class="header_shape hidden lg:block"></div>
 
-            <div class="header_image flex items-center px-14">
-                <iframe width="100%" height="300px" src="{{ str_replace('watch?v=', 'embed/', $comproDetail->video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+            <div class="header_image flex items-center lg:px-14">
+                <iframe width="100%" height="400px" src="{{ str_replace('watch?v=', 'embed/', $comproDetail->video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
             </div> <!-- header image -->
         </div> <!-- header hero -->
     </section>
@@ -74,9 +75,9 @@
                     <h5 class="sub_title">Paket</h5>
                     <h4 class="main_title">Paket yang kami tawarkan antara lain</h4>
                 </div> <!-- section title -->
-                <div class="flex pt-3">
+                <div class="grid grid-cols-4 gap-4 pt-3">
                     @foreach ($packages as $package)
-                    <div class="w-4/12 flex flex-col items-center">
+                    <div class="flex flex-col items-center">
                         <div class="about_list_content w-full">
                             <p class="font-bold">{{ $package->judul }}</p>
                             <p>
@@ -85,8 +86,9 @@
                                 <var class="not-italic">{{ number_format($package->harga_baru) }}</var>
                             </p>
                         </div>
-                        <div class="py-3 wyswyg-package">{!! $package->deskripsi !!}</div>
-                        <a href="" class="mt-4 inline-flex bg-green-lemon hover:bg-green-200 text-gray-800 font-semibold p-3 rounded-md">
+                        <div class="py-3 wyswyg-package break-all w-full">{!! $package->deskripsi !!}</div>
+                        <a href="https://soalpppk.id/register"
+                        class="mt-4 inline-flex bg-green-lemon hover:bg-green-200 text-gray-800 font-semibold p-3 rounded-md">
                             Daftar Sekarang
                         </a>
 
