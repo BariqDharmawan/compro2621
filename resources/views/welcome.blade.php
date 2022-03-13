@@ -1,20 +1,20 @@
 @extends('layouts.master')
 
-@section('title', 'SOAL PPPK')
+@section('title', $comproDetail->name)
 
 @section('content')
     <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== HEADER PART START ======-->
 
-    <section class="header_area pt-44" id="header-area">
+    <section class="header_area pt-28 lg:pt-44" id="header-area">
         @include('partials.nav')
 
         <div id="home" class="header_hero relative z-10 lg:flex items-center">
             <div class="container">
                 <div class="row">
                     <div class="w-full lg:w-1/2">
-                        <div class="header_hero_content pt-150 lg:pt-0">
+                        <div class="header_hero_content lg:pt-0">
                             <h2 class="hero_title text-2xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-extrabold">
                                 {{ $headContent->heading }}
                             </h2>

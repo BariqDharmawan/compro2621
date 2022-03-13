@@ -3,8 +3,9 @@
         <div class="row items-center">
             <div class="w-full">
                 <nav class="flex items-center justify-between py-4 navbar navbar-expand-lg">
-                    <a class="navbar-brand mr-5 font-bold" href="index.html">
-                        {{ config('app.name') }}
+                    <a class="navbar-brand flex gap-2 mr-5 font-bold" href="{{ url('/') }}">
+                        <img src="{{ Storage::url('compro/' . $comproDetail->logo) }}" alt="" srcset="" class="h-5">
+                        {{ $comproDetail->name }}
                     </a>
                     <button class="block navbar-toggler focus:outline-none lg:hidden" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="toggler-icon"></span>
