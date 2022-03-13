@@ -7,12 +7,21 @@
 .navbar-area.sticky {
     @apply bg-green-lemon;
 
+    .navbar-brand {
+        @apply text-white;
+    }
+
     .nav-item a {
-        @apply text-gray-100;
+        @media screen and (min-width: 1280px) {
+            @apply text-gray-100;
+        }
 
         &.active {
-            font-weight: bold;
-            color: white;
+            @apply text-green-lemon font-bold;
+
+            @media screen and (min-width: 1280px) {
+                @apply text-white;
+            }
         }
     }
 }
@@ -20,9 +29,6 @@
 .navbar-brand {
     @apply text-green-lemon font-extrabold;
 
-    .navbar-area.sticky & {
-        @apply text-white;
-    }
 }
 
 @import './container', './box', './btn';
