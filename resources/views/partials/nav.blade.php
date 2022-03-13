@@ -26,8 +26,8 @@
                             <li class="nav-item ml-5 lg:ml-11">
                                 <a class="page-scroll" href="#section-testimony">Testimoni</a>
                             </li>
-                            <li class="ml-5 lg:ml-11">
-                                <a href="https://soalpppk.id" class="btn-login rounded-full py-2 px-4" target="_blank">
+                            <li class="ml-5 lg:ml-11 lg:mt-0 mt-3">
+                                <a href="https://soalpppk.id" class="btn-login flex justify-center lg:inline-block w-full lg:w-auto rounded-full py-2 px-4" target="_blank">
                                     Login
                                 </a>
                             </li>
