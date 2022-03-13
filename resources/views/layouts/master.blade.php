@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('template/assets/images/favicon.png') }}" type="image/png">
+    <link rel="shortcut icon" href="{{ Storage::url('compro/' . $comproDetail->logo) }}" type="image/png">
 
     <!--====== Animate CSS ======-->
     <link rel="stylesheet" href="{{ asset('template/assets/css/animate.css') }}">

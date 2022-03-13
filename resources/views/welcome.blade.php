@@ -7,7 +7,7 @@
 
     <!--====== HEADER PART START ======-->
 
-    <section class="header_area lg:pt-32 xl:pt-20" id="header-area">
+    <section class="header_area pt-44" id="header-area">
         @include('partials.nav')
 
         <div id="home" class="header_hero relative z-10 lg:flex items-center">
@@ -71,14 +71,14 @@
     <section id="section-package" class="about_area pt-120 relative">
         <div class="container">
             <div class="about_content mx-4 pt-11 lg:pt-15 lg:pb-15">
-                <div class="section_title pb-9">
+                <div class="section_title pb-9 text-center">
                     <h5 class="sub_title">Paket</h5>
                     <h4 class="main_title">Paket yang kami tawarkan antara lain</h4>
                 </div> <!-- section title -->
-                <div class="grid grid-cols-4 gap-4 pt-3">
+                <div class="grid grid-cols-1 gap-6 pt-3 justify-items-center">
                     @foreach ($packages as $package)
-                    <div class="flex flex-col items-center">
-                        <div class="about_list_content w-full">
+                    <div class="flex flex-col items-center w-1/2">
+                        <div class="about_list_content w-full text-center">
                             <p class="font-bold">{{ $package->judul }}</p>
                             <p>
                                 Rp.
@@ -88,7 +88,8 @@
                         </div>
                         <div class="py-3 wyswyg-package break-all w-full">{!! $package->deskripsi !!}</div>
                         <a href="https://soalpppk.id/register"
-                        class="mt-4 inline-flex bg-green-lemon hover:bg-green-200 text-gray-800 font-semibold p-3 rounded-md">
+                        class="mt-4 inline-flex bg-green-lemon hover:bg-green-200 text-gray-800
+                        font-semibold p-3 rounded-md">
                             Daftar Sekarang
                         </a>
 
