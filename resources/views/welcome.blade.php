@@ -30,7 +30,7 @@
             <div class="header_shape hidden lg:block"></div>
 
             <div class="header_image flex items-center lg:px-14">
-                <iframe width="100%" height="400px" src="{{ str_replace('watch?v=', 'embed/', $comproDetail->video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
+                <iframe width="100%" height="400px" src="{{ str_replace('watch?v=', 'embed/', $headContent->video_link) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe>
             </div> <!-- header image -->
         </div> <!-- header hero -->
     </section>
